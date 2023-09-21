@@ -1,0 +1,66 @@
+.before {
+    background-image: url("https://img.freepik.com/free-photo/high-angle-open-books-teacup_23-2149871504.jpg?w=1060&t=st=1694754528~exp=1694755128~hmac=be3e15d2f03e872467695ac3c8aca588367df6fc2653372025484ae2c4390997");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .error{
+    color: red;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .login{
+    text-align: left;
+  }
+
+  .signup{
+    text-align: left;
+  }
+
+  /* Create a white container for the form */
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+
+  }
+
+  
+  
+  /* Style form elements */
+  .login-form, .signup-form {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  button[type="submit"] {
+    background-color: #007BFF; /* Change to your desired button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Change to your desired hover color */
+  }
+  
+  .title{
+    text-align: end;
+    font-family:fantasy ;
+  }
