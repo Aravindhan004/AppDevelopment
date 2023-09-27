@@ -1,0 +1,2 @@
+On Day-10, 
+	Review was carried out for the UI and Redux Implementation with pages like Privacy Policies, Terms & Conditions, FAQs etc.,
