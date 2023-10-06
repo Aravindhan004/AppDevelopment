@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "e66a7851-ead7-4d7f-b588-b5e485d11596",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28496124"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"murphy@gmail.com\",\n    \"password\": \"Murphy@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cillian Murphy\",\n    \"email\": \"murphy@gmail.com\",\n    \"password\": \"Murphy@123\",\n    \"role\": \"customer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2MzkyNTIyLCJleHAiOjE2OTY0Nzg5MjJ9.lP5XdyFeKO-fX5tt5XPtvkEodpyF6yUHu0EZLRXLQfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/user/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2MzkyNTIyLCJleHAiOjE2OTY0Nzg5MjJ9.lP5XdyFeKO-fX5tt5XPtvkEodpyF6yUHu0EZLRXLQfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/user/find/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"user",
+								"find",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7InVpZCI6Miwicm9sZSI6IkNVU1RPTUVSIiwibmFtZSI6IkNpbGxpYW4gTXVycGh5In0sInN1YiI6Im11cnBoeUBnbWFpbC5jb20iLCJpc3MiOiJJYW1OZW8iLCJpYXQiOjE2OTY0Mzk2MjEsImV4cCI6MTY5NjUyNjAyMX0.Xr7ZfgGFoLB-mnhccVQs9X33V4jnDLkcosHk1hSMKB0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productName\": \"Onion\",\n    \"productPrice\": 80.0,\n    \"productQuantity\": 10,\n    \"productImage\": \"onion.jpg\",\n    \"productDesc\": \"Onion\",\n    \"cid\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/product/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"product",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2MzkyNTIyLCJleHAiOjE2OTY0Nzg5MjJ9.lP5XdyFeKO-fX5tt5XPtvkEodpyF6yUHu0EZLRXLQfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productName\": \"Pineapple\",\n    \"productPrice\": 100.0,\n    \"productQuantity\": 30,\n    \"productImage\": \"pineapple.jpg\",\n    \"productDesc\": \"Desc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/product/edit/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"product",
+								"edit",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2MzkyNTIyLCJleHAiOjE2OTY0Nzg5MjJ9.lP5XdyFeKO-fX5tt5XPtvkEodpyF6yUHu0EZLRXLQfM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/product/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"product",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2NDA2NjI1LCJleHAiOjE2OTY0OTMwMjV9.YQc3zvnjxsLtQww3XB2KhuylnGXuK8Vp1zhav--Q3bs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderAddress\": \"{{$randomStreetAddress}}\",\n    \"paymentMode\": \"UPI\",\n    \"uid\": 3,\n    \"products\": [\n        {\n            \"pid\": 3,\n            \"quantity\": 5\n        },\n        {\n            \"pid\": 4,\n            \"quantity\": 5\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/order/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"order",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXJwaHlAZ21haWwuY29tIiwiaWF0IjoxNjk2NDA2NjI1LCJleHAiOjE2OTY0OTMwMjV9.YQc3zvnjxsLtQww3XB2KhuylnGXuK8Vp1zhav--Q3bs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/order/get/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"order",
+								"get",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/category/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"category",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
