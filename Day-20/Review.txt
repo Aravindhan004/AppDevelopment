@@ -1,0 +1,2 @@
+On Day-20, 
+	Review was carried out for the Implementation of Spring Security, JWT Token usage and CRUD Operations, Eureka naming server, API gateway implementation with microservices.
